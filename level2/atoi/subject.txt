@@ -1,0 +1,60 @@
+Assignment name  : ft_atoi
+Expected files   : ft_atoi.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that converts the string argument str to an integer (type int)
+and returns it.
+
+It works much like the standard atoi(const char *str) function, see the man.
+
+Your function must be declared as follows:
+
+int	ft_atoi(const char *str);
+--------------------------------------------------------------------------------
+
+ATOI MAN:
+
+ATOI(3)                  BSD Library Functions Manual                  ATOI(3)
+
+NAME
+     atoi, atoi_l -- convert ASCII string to integer
+
+LIBRARY
+     Standard C Library (libc, -lc)
+
+SYNOPSIS
+     #include <stdlib.h>
+
+     int
+     atoi(const char *str);
+
+     #include <xlocale.h>
+
+     int
+     atoi_l(const char *str, locale_t loc);
+
+DESCRIPTION
+     The atoi() function converts the initial portion of the string pointed to by str to int representation.
+
+     It is equivalent to:
+
+           (int)strtol(str, (char **)NULL, 10);
+
+     While the atoi() function uses the current locale, the atoi_l() function may be passed a locale directly. See xlocale(3) for more information.
+
+IMPLEMENTATION NOTES
+     The atoi() and atoi_l() functions are thread-safe and async-cancel-safe.
+
+     The strtol() and strtol_l() functions are recommended instead of atoi() and atoi_l() functions, especially in new code.
+
+ERRORS
+     The function atoi() need not affect the value of errno on an error.
+
+SEE ALSO
+     atof(3), atol(3), strtod(3), strtol(3), strtoul(3), xlocale(3)
+
+STANDARDS
+     The atoi() function conforms to ISO/IEC 9945-1:1990 (``POSIX.1''), ISO/IEC 9899:1990 (``ISO C90''), and ISO/IEC 9899:1999 (``ISO C99'').
+
+BSD                              June 4, 1993                              BSD
